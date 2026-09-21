@@ -1,5 +1,5 @@
 resource "aws_iam_role" "mysql_role" {
-  name = locals.mysql_role_name
+  name = local.mysql_role_name
 
   # Terraform's "jsonencode" function converts a
   # Terraform expression result to valid JSON syntax.
