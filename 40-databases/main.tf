@@ -35,7 +35,7 @@ resource "terraform_data" "bootstrap" {
     provisioner "remote-exec" { 
         inline = [
             "chmod +x /tmp/bootstarp.sh",
-            "sudo sh /tmp/bootstarp.sh mongodb"
+            "sudo sh /tmp/bootstarp.sh mongodb ${var.environment}"
         ]
     }
 }
@@ -81,7 +81,7 @@ resource "terraform_data" "bootstrap_redis" {
     provisioner "remote-exec" { 
         inline = [
             "chmod +x /tmp/bootstarp.sh",
-            "sudo sh /tmp/bootstarp.sh redis"
+            "sudo sh /tmp/bootstarp.sh redis ${var.environment}"
         ]
     }
 }
