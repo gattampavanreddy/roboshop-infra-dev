@@ -1,6 +1,7 @@
 #!/bin/bash
 
 component=$1
+environment=$2
 
 dnf install ansible -y
 
@@ -9,4 +10,4 @@ git clone https://github.com/gattampavanreddy/ansible-roboshop-roles-tf.git
 
 cd ansible-roboshop-roles-tf
 git pull 
-ansible-playbook -e component=$component -e env=$var.environment roboshop.yaml
+ansible-playbook -e component=$component -e env=$environment roboshop.yaml

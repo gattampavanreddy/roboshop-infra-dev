@@ -123,7 +123,7 @@ resource "terraform_data" "mysql" {
     provisioner "remote-exec" { 
         inline = [
             "chmod +x /tmp/bootstarp.sh",
-            "sudo sh /tmp/bootstarp.sh mysql"
+            "sudo sh /tmp/bootstarp.sh mysql ${var.environment}"
         ]
     }
 }
