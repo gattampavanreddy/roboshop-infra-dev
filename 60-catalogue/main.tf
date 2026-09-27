@@ -1,4 +1,4 @@
-resource "aws_instance" "catalofue" {
+resource "aws_instance" "catalogue" {
   ami           = local.ami_id
   instance_type = "t3.micro" 
   subnet_id     = local.private_subnet_ids
@@ -37,6 +37,13 @@ resource "terraform_data" "catalogue" {
         ]
     }
 }
+
+action "aws_ec2_stop_instance" "catalogue" {
+    config {
+      instance_id = aws_instance.catalogue.id
+    }
+}
+
 
 
 
