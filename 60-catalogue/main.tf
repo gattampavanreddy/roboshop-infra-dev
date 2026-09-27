@@ -148,7 +148,7 @@ resource "aws_launch_template" "catalogue" {
   timeouts {
     delete = "15m"
   }
-
+ 
   tag {
     key                 = "lorem"
     value               = "ipsum"
