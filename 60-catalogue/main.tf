@@ -144,7 +144,7 @@ resource "aws_autoscaling_group" "catalogue" {
     preferences { 
       min_healthy_percentage = 50
     }
-    triggers = ["launch_template"]
+    # triggers = ["launch_template"]
   }
 
   dynamic "tag" {
@@ -168,7 +168,7 @@ resource "aws_autoscaling_group" "catalogue" {
 }
 
 resource "aws_autoscaling_policy" "catalogue" {
-  autoscaling_group_name = aws_autoscaling_group.catalogue
+  autoscaling_group_name = aws_autoscaling_group.catalogue.name
   name                   = "${var.project}-${var.environment}-catalogue"
   policy_type            = "TargetTrackingScaling"
   estimated_instance_warmup = 120
