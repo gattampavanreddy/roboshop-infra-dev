@@ -28,7 +28,7 @@ resource "aws_lb_listener" "https" {
 
     fixed_response {
       content_type = "text/html"
-      message_body = "<h1>guddala jaya</h1>"
+      message_body = "<h1>rey puka sai ga, ayyaa kudhiii allukuuu padhhii</h1>"
       status_code  = "200"
     }
   }
