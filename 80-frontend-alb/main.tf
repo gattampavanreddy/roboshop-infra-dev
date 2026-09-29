@@ -68,7 +68,7 @@ resource "aws_lb_target_group" "frontend" {
 }
 
 resource "aws_lb_listener_rule" "frontend" {
-  listener_arn = local.backend_alb_listener_arn
+  listener_arn = aws_lb_listener.https.arn
   priority     = 10
 
   action {
