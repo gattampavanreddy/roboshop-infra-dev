@@ -322,7 +322,7 @@ resource "aws_security_group_rule" "frontend_alb_public" {
   security_group_id = local.frontend_alb_sg_id
 }
 
-/* # Open VPN
+# Open VPN
 resource "aws_security_group_rule" "openvpn_public_443" {
   type              = "ingress"
   from_port         = 443
@@ -352,4 +352,4 @@ resource "aws_security_group_rule" "backend_alb_openvpn" {
   # Where traffic is coming from
   source_security_group_id = local.openvpn_sg_id
   security_group_id = local.backend_alb_sg_id
-} */
+}
