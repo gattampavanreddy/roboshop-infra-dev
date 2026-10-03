@@ -8,7 +8,7 @@ terraform {
 
   backend "s3" {
     bucket = "roboshop-88s-pavan-dev" # this is for S3 bucket
-    key    = "roboshop-dev-backend-alb"
+    key    = "roboshop-dev-backend-catalogue"
     region = "us-east-1"
     encrypt = true
     use_lockfile = true # this is for state locking to prevent concurrent modifications to the state file
